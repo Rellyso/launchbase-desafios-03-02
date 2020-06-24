@@ -1,0 +1,92 @@
+{% extends 'layout.njk' %}
+
+    {% block head %}
+        <title>courses</title>
+    {% endblock %}
+
+    {% block bodyId %}
+        <body id="courses">
+    {% endblock %}
+    
+    {% block content %}
+        <div id="wrapper">
+            <h1>Cursos</h1>
+        </div>
+
+        
+        <section class="cards">
+
+            <div class="card" id="starter">
+                <span class="card__number">
+                        01
+                    </span>
+        
+                    <img src="assets/icons/rckt_starter.svg" alt="Starter">
+        
+        
+                    <div class="card__content">
+                        <p class="card__info"><strong>Torne-se um programador desejado</strong> no mercado com esses cursos gratuitos.</p>
+                        <div class="card__desc">
+                            <p class="card__modules">5 módulos</p>
+                            <p class="price">Free</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="card" id="launchbase">
+                <span class="card__number">
+                    02
+                </span>
+
+                <img src="assets/icons/rckt_launch.svg" alt="launchbase">
+
+
+                <div class="card__content">
+                    <p class="card__info"><strong>Domine a programação do zero</strong> e tenha acesso às melhores oportunidades do mercado.</p>
+                    <div class="card__desc">
+                        <p class="card__modules">10 módulos</p>
+                        <p class="price">Free</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="gostack">
+                <span class="card__number">
+                    03
+                </span>
+
+                <img src="assets/icons/rckt_goStack.svg" alt="gostack">
+
+
+                <div class="card__content" id="">
+                    <p class="card__info"><strong>Treinamento imersivo</strong> nas tecnologias mais modernas de desenvolvimento web e mobile.</p>
+                    <div class="card__desc">
+                        <p class="card__modules">8 módulos</p>
+                        <p class="price">Free</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="material-icons">
+                        close
+                    </i>
+                </a>
+                <a class="max-modal">
+                    <i id="minimize" class="material-icons">
+                        filter_none
+                    </i>
+
+                    <i id="maximize" class="material-icons active">
+                        crop_square
+                    </i>
+                </a>
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <script src="cursos.js"></script>
+    {% endblock %}
