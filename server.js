@@ -3,6 +3,8 @@ const nunjucks = require('nunjucks')
 
 const server = express()
 
+const courses = require('./data')
+
 // 5 - configurando para utilizar estilos na pasta estática public/
 server.use(express.static('public'))
 
