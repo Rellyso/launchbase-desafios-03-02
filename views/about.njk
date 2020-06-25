@@ -6,20 +6,18 @@
 
     {% block content %}
         <div id="wrapper">
-            <img src="https://rocketseat.gallerycdn.vsassets.io/extensions/rocketseat/rocketseatreactnative/3.0.1/1588456740326/Microsoft.VisualStudio.Services.Icons.Default" alt="Rocketseat logo">
+            <img src="{{about.img}}" alt="foto de {{about.name}}">
 
-            <h1>Rocketseat</h1>
+            <h1>{{about.name}}</h1>
 
-            <p>Uma plataforma de educação em tecnologia, somos uma comunidade incrível de programadores em busca do próximo nível. Acesse <a href="http://rocketseat.com.br" target="_blank" rel="noopener noreferrer">Rocketseat</a>.</p>
+            <p>{{about.description}}</p>
 
             <div class="list">
                 <h3>Principais Tecnologias</h3>
+            {% for tech in about.technologies %}
             <ul>
-                <li><span>Javascript</span></li>
-                <li><span>HTML</span></li>
-                <li><span>CSS</span></li>
-                <li><span>Nunjucks</span></li>
-                <li><span>SQL</span></li>
+                <li><span>{{tech.name}}</span></li>
+            {% endfor %}
             </ul>
             </div>
         </div>
