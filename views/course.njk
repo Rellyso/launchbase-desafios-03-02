@@ -5,26 +5,29 @@
     {% endblock %}
 
     {% block bodyId %}
-        <body id="courses">
+        <body id="course">
     {% endblock %}
     
     {% block content %}
         <div id="wrapper">
             <h1>{{course.name}}</h1>
+
+            <span class="return">
+                <a href="/courses" class="material-icons">
+                    navigate_before
+                </a>
+            </span>
         </div>
 
         
-        <section class="cards">
-            <div class="card" id="{{course.name}}">
-                <span class="card__number">
-                        {{course.id}}
-                    </span>
-        
+        <section class="course">
+            <div class="card-course" id="{{course.name}}">
                     <img src="{{course.img}}" alt="imagem do curso {{course.name}}">
-        
         
                     <div class="card__content">
                         <p class="card__info">{{course.info}}</p>
+                        <p class="card__block"><a href="https://rocketseat.com.br/{{course.name}}" target="blank">Acesse o curso aqui</a></p>
+
                         <div class="card__desc">
                             <p class="card__modules">{{course.modules}}</p>
                             <p class="price">{{course.price}}</p>
