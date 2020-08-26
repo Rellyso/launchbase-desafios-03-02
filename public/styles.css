@@ -43,6 +43,22 @@ header {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+
+    min-height: calc(100vh - 88px);
+}
+
+footer {
+    margin: 0 auto;
+    padding: 30px;
+
+    min-height: 80px;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .links {
     text-align: center;
 }
@@ -174,13 +190,11 @@ header {
 }
 
 #footer-links {
-    position: absolute;
-
     bottom: 0;
 
     width: 100%;
 
-    padding: 20px;
+    padding: 30px;
 
     background-color: rgba(0,0,0,0.1);
     
@@ -190,14 +204,73 @@ header {
     border-bottom: 2px solid var(--color-rocket);
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
 
+    width: 100%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer .footer-address {
+    max-width: 400px;
+
+    color: #04d361;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 32px;
+
+    align-self: flex-end;
+
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+
+    cursor: default;
+
+    border: 2px solid #ffffff11;
+    border-radius: 8px;
+}
+
+footer .rights{
+    margin-top: 32px;
+    
+    font-weight: 500;
+    font-size: 18px;
+
+    align-self: center;
+
+    position: relative;
+
+    cursor: default;
+}
+
+footer .rights::before {
+    content: "";
+
+    width: calc(100%);
+    height: 2px;
+
+    margin: 0 auto;
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+
+    background-color: var(--color-rocket);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: ease .5s transform;
+}
+
+footer .rights:hover::before {
+    transform: scaleX(1);
+}
 
 
 /* ========CARDS======== */
-
-
-
-
 
 .cards {
     max-width: 1500px;
@@ -224,7 +297,7 @@ header {
     min-height: 600px;
     height: 70vh;
 
-    /* border: solid 2px var(--color-rocket); */
+    border: solid 2px rgba(255, 255, 255, 0.1);
     border-radius: 8px;
 
     background-color: rgba(0, 0, 0, 0.349);
